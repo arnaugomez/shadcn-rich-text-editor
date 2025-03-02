@@ -42,15 +42,17 @@ import Placeholder from "@tiptap/extension-placeholder";
 import "./rich-text-editor.css";
 
 interface RichTextEditorProps {
-  content?: string;
+  value?: string;
   placeholder?: string;
   onChange?: (content: string) => void;
+  className?: string;
 }
 
 export function RichTextEditor({
-  content: content = "",
+  value = "",
   onChange,
   placeholder = "Write something...",
+  className,
 }: RichTextEditorProps) {
   const editor = useEditor({
     immediatelyRender: false,
@@ -71,7 +73,7 @@ export function RichTextEditor({
       SubScript,
       Placeholder.configure({ placeholder }),
     ],
-    content,
+    content: value,
     onUpdate: ({ editor }) => {
       onChange?.(editor.getHTML());
     },
@@ -90,7 +92,7 @@ export function RichTextEditor({
   }
 
   return (
-    <div className="">
+    <div className={className}>
       <div className="flex flex-wrap items-center gap-2 mb-3">
         <ToggleGroup type="multiple" size="sm" variant="outline">
           <ToggleGroupItem
@@ -311,7 +313,6 @@ export function RichTextEditor({
               editor.chain().focus().unsetLink().run();
             }}
             disabled={!editor.can().chain().focus().unsetLink().run()}
-            data-state={editor.isActive("link") ? "on" : "off"}
           >
             <Unlink className="size-4" />
           </ToggleGroupItem>
