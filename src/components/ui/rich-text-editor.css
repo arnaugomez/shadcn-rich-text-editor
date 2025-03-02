@@ -3,5 +3,5 @@
   content: attr(data-placeholder);
   @apply pointer-events-none float-left;
   height: 0;
-  color: var(--color-muted-foreground);
+  color: var(--muted-foreground);
 }
