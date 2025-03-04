@@ -51,7 +51,7 @@ interface RichTextEditorProps {
 export function RichTextEditor({
   value = "",
   onChange,
-  placeholder = "Write something...",
+  placeholder = "",
   className,
 }: RichTextEditorProps) {
   const editor = useEditor({
