@@ -17,7 +17,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Rich Text Editor - A WYSIWYG editor built with Tiptap and React",
   description:
-    "A classic WYSIWYG rich text editor built with Tiptap, React and Shadcn UI. Includes features like mentions, link, placeholder, and more.",
+    "A classic WYSIWYG rich text editor built with Tiptap, React and Shadcn UI.",
   authors: [{ name: "Arnau Gomez", url: "https://www.arnaugomez.com" }],
   keywords: [
     "rich text editor",
