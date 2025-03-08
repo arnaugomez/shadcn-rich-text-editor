@@ -1,0 +1,43 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry.json",
+  "name": "Rich Text Editor",
+  "homepage": "https://shadcn-rich-text-editor.vercel.app/",
+  "items": [
+    {
+      "name": "rich-text-editor",
+      "type": "registry:component",
+      "title": "Rich Text Editor",
+      "author": "Arnau Gómez (www.arnaugomez.com)",
+      "description": "A classic WYSIWYG rich text editor built with Tiptap",
+      "dependencies": [
+        "@tiptap/extension-highlight",
+        "@tiptap/extension-link",
+        "@tiptap/extension-placeholder",
+        "@tiptap/extension-subscript",
+        "@tiptap/extension-superscript",
+        "@tiptap/extension-text-align",
+        "@tiptap/extension-underline",
+        "@tiptap/react",
+        "@tiptap/starter-kit",
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "toggle-group"
+      ],
+      "files": [
+        {
+          "path": "registry/new-york/rich-text-editor/rich-text-editor.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "registry/new-york/rich-text-editor/rich-text-editor.css",
+          "type": "registry:component"
+        }
+      ],
+      "docs": "Install and import the @tailwindcss/typography plugin",
+      "devDependencies": [
+        "@tailwindcss/typography"
+      ]
+    }
+  ]
+}

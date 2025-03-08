@@ -1,6 +1,6 @@
 "use client";
 
-import { RichTextEditor } from "@/components/ui/rich-text-editor";
+import { RichTextEditor } from "@/registry/new-york/rich-text-editor/rich-text-editor";
 import { useState } from "react";
 
 export default function Home() {
