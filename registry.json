@@ -34,7 +34,7 @@
           "type": "registry:component"
         }
       ],
-      "docs": "Install and import the @tailwindcss/typography plugin",
+      "docs": "Important: install and import the @tailwindcss/typography plugin. Follow this guide: https://github.com/tailwindlabs/tailwindcss-typography",
       "devDependencies": [
         "@tailwindcss/typography"
       ]
