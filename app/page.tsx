@@ -3,7 +3,7 @@ import InstallTabs from "@/components/ui/install-tabs";
 import { OpenInV0Button } from "@/components/ui/open-in-v0-button";
 
 export default function Home() {
-  const componentUrl = `https://${process.env.VERCEL_URL}/r/rich-text-editor.json`;
+  const componentUrl = `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}/r/rich-text-editor.json`;
   return (
     <div className="py-10 sm:py-40 px-4">
       <div className="mx-auto max-w-prose">
