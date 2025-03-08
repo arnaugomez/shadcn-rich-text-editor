@@ -1,18 +1,19 @@
+"use client";
 import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Copy } from "lucide-react";
 import { toast } from "sonner";
 
 interface Props {
-  componentName: string;
+  componentUrl: string;
 }
 
-export default function InstallTabs({ componentName }: Props) {
+export default function InstallTabs({ componentUrl }: Props) {
   const tabs = [
     {
       name: "pnpm",
       value: "pnpm",
-      content: `pnpm dlx shadcn@latest add ${process.env.NEXT_PUBLIC_BASE_URL}/r/${componentName}.json`,
+      content: `pnpm dlx shadcn@latest add ${componentUrl}`,
       icon: (
         <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
           <title>pnpm</title>
@@ -26,7 +27,7 @@ export default function InstallTabs({ componentName }: Props) {
     {
       name: "npm",
       value: "npm",
-      content: `npx shadcn@latest add ${process.env.NEXT_PUBLIC_BASE_URL}/r/${componentName}.json`,
+      content: `npx shadcn@latest add ${componentUrl}`,
       icon: (
         <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
           <title>npm</title>
@@ -40,7 +41,7 @@ export default function InstallTabs({ componentName }: Props) {
     {
       name: "yarn",
       value: "yarn",
-      content: `npx shadcn@latest add ${process.env.NEXT_PUBLIC_BASE_URL}/r/${componentName}.json`,
+      content: `npx shadcn@latest add ${componentUrl}`,
       icon: (
         <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
           <title>Yarn</title>
@@ -54,7 +55,7 @@ export default function InstallTabs({ componentName }: Props) {
     {
       name: "bun",
       value: "bun",
-      content: `bunx --bun shadcn@latest add ${process.env.NEXT_PUBLIC_BASE_URL}/r/${componentName}.json`,
+      content: `bunx --bun shadcn@latest add ${componentUrl}`,
       icon: (
         <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
           <title>Bun</title>
